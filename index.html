@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Blah</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!-- adding jQuery and Bootstrap -->
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+		<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+		</script>
+		<!-- end adding jQuery and Bootstrap -->
+	</head>
+	<body>
+		<div id="summary">
+		
+		</div>
+		
+		<!-- localstorage -->
+		<script>
+		if (typeof(Storage) !== "undefined") {
+			// Code for localStorage
+			console.log("Viskas gerai");
+		  
+			if (localStorage.topic) {
+			  //already exists, second loading of the game
+			} else {
+				// first loading of the game
+				// create all localStorage variables
+				
+				// prompt for topic of your thesis
+			  localStorage.setItem("topic", "Eh?");
+			}
+
+			// Retrieve
+			document.getElementById("summary").innerHTML = localStorage.getItem("topic");
+		} else {
+		  // Sorry! No Web Storage support..
+		  console.log("No localStorage support!");
+		}
+		</script>
+		<!-- end localstorage -->
+	</body>
+</html>
