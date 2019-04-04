@@ -3,18 +3,58 @@
 	<head>
 		<title>Blah</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<!-- adding jQuery and Bootstrap -->
+		<!-- adding jQuery, Bootstrap, and Font Awesome -->
 		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 		<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
 		</script>
-		<!-- end adding jQuery and Bootstrap -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- end adding jQuery, Bootstrap, and Font Awesome -->
 	</head>
 	<body>
-		<div id="summary">
-		
+	<div class="container">
+		<div class="row" id="heading">
+			<div id="content" class="col-md-6">
+				<p>Welcome to Thesis!</p>
+				<p>Your goal is to complete your thesis and earn a top grade - 5 stars!
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						</p>
+				<p>First, you need to identify a topic. What is your topic?</p>
+				<p>Topic: <span id="summary"></span></p>
+				<p>Great! Now that you have a topic, it's time to start doing some research.</p>
+			</div>
+			<div id="progress-bar" class="col-md-6">
+			</div>
 		</div>
-		
+		<div class="row">
+			<div id="clickers" class="col-md-2">
+				<button id="research"><i class="fa fa-book"></i> Research</button>
+				<button id="research"><i class="fa fa-pencil"></i> Writing</button>
+				<button id="research"><i class="fa fa-thumb-tack"></i> Editing</button>
+			</div>
+			<div id="inventory" class="col-md-4">
+				<p>Research: <span id="research-status">0</span>/<span id="research-max">20</span>
+				<p>Writing: <span id="writing-status">0</span>/<span id="writing-max">20</span>
+				<p>Editing: <span id="editing-status">0</span>/<span id="editing-max">20</span>
+			</div>
+			<div id="tasks" class="col-md-4">
+				<p>Journal Articles:</p>
+				<button class="journal"><i class="fa fa-newspaper-o"></i></button>
+				<button class="journal"><i class="fa fa-newspaper-o"></i></button>
+				<button class="journal"><i class="fa fa-newspaper-o"></i></button>
+				<button class="journal"><i class="fa fa-newspaper-o"></i></button>
+				<button class="journal"><i class="fa fa-newspaper-o"></i></button>
+				<button class="journal"><i class="fa fa-newspaper-o"></i></button>
+				<button class="journal"><i class="fa fa-newspaper-o"></i></button>
+				<button class="journal"><i class="fa fa-newspaper-o"></i></button>
+				<button class="journal"><i class="fa fa-newspaper-o"></i></button>
+			</div>
+		</div>
+	</div>
 		<!-- localstorage -->
 		<script>
 		if (typeof(Storage) !== "undefined") {
