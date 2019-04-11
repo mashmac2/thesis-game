@@ -23,25 +23,25 @@
 						<i class="fa fa-star"></i>
 						<i class="fa fa-star"></i>
 						</p>
-				<p>First, you need to identify a topic. What is your topic?</p>
-				<p>Topic: <span id="summary"></span></p>
-				<p>Great! Now that you have a topic, it's time to start doing some research.</p>
+				<p>Now that you have a topic, it's time to start doing some research.</p>
 			</div>
 			<div id="progress-bar" class="col-md-6">
+				<p>Topic: <span id="topic-summary"></span></p>
+				<p>Progress: 0%</p>
 			</div>
 		</div>
 		<div class="row">
-			<div id="clickers" class="col-md-2">
+			<div id="clickers" class="col-md-3">
 				<button id="research"><i class="fa fa-book"></i> Research</button>
 				<button id="research"><i class="fa fa-pencil"></i> Writing</button>
 				<button id="research"><i class="fa fa-thumb-tack"></i> Editing</button>
 			</div>
-			<div id="inventory" class="col-md-4">
+			<div id="inventory" class="col-md-3">
 				<p>Research: <span id="research-status">0</span>/<span id="research-max">20</span>
 				<p>Writing: <span id="writing-status">0</span>/<span id="writing-max">20</span>
 				<p>Editing: <span id="editing-status">0</span>/<span id="editing-max">20</span>
 			</div>
-			<div id="tasks" class="col-md-4">
+			<div id="tasks" class="col-md-6">
 				<p>Journal Articles:</p>
 				<button class="journal"><i class="fa fa-newspaper-o"></i></button>
 				<button class="journal"><i class="fa fa-newspaper-o"></i></button>
@@ -55,29 +55,6 @@
 			</div>
 		</div>
 	</div>
-		<!-- localstorage -->
-		<script>
-		if (typeof(Storage) !== "undefined") {
-			// Code for localStorage
-			console.log("Viskas gerai");
-		  
-			if (localStorage.topic) {
-			  //already exists, second loading of the game
-			} else {
-				// first loading of the game
-				// create all localStorage variables
-				
-				// prompt for topic of your thesis
-			  localStorage.setItem("topic", "Eh?");
-			}
-
-			// Retrieve
-			document.getElementById("summary").innerHTML = localStorage.getItem("topic");
-		} else {
-		  // Sorry! No Web Storage support..
-		  console.log("No localStorage support!");
-		}
-		</script>
-		<!-- end localstorage -->
+	<script type="text/javascript" src="game.js"></script>
 	</body>
 </html>
