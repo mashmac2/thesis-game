@@ -3,11 +3,26 @@ body {
 	margin: 0;
 }
 #heading{
-	padding: 20px; 
+	padding: 20px;
 	margin: 10px auto;
 	border: 1px solid black;
+	height: 130px;
 	background-color: #eee;
 	color: #333;
+	overflow: auto;
+}
+
+#content p{
+  display:none;
+}
+#clickers{
+  display:none;
+}
+#inventory{
+  display:none;
+}
+#tasks{
+  display:none;
 }
 
 #progress-bar p{
@@ -21,4 +36,12 @@ body {
 #inventory p{
 	margin-top: 2px;
 	margin-bottom: 15px;
+}
+
+#footer{
+  margin-top: 100px;
+}
+
+#saving-status-1, #saving-status-2{
+  display:none;
 }

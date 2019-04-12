@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Blah</title>
+	  <!-- The Thesis Game by Mike Henry <mikeshenry@gmail.com> -->
+		<title>The Thesis Game</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<!-- adding jQuery, Bootstrap, and Font Awesome -->
 		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
@@ -15,31 +16,32 @@
 	<div class="container">
 		<div class="row" id="heading">
 			<div id="content" class="col-md-6">
-				<p>Welcome to Thesis!</p>
-				<p>Your goal is to complete your thesis and earn a top grade - 5 stars!
+				<p class="one">Welcome to Thesis!</p>
+				<p class="two">Your goal is to complete your thesis and earn a top grade - 5 stars!
 						<i class="fa fa-star"></i>
 						<i class="fa fa-star"></i>
 						<i class="fa fa-star"></i>
 						<i class="fa fa-star"></i>
 						<i class="fa fa-star"></i>
 						</p>
-				<p>Now that you have a topic, it's time to start doing some research.</p>
+				<p class="three">Now that you have a topic, it's time to start doing some research.</p>
+				<p class="four">Good! You now have 10 research points. That is enough to read one journal article. Click on the journal article section to purchase one:</p>
 			</div>
 			<div id="progress-bar" class="col-md-6">
 				<p>Topic: <span id="topic-summary"></span></p>
 				<p>Progress: 0%</p>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" style="height:110px;">
 			<div id="clickers" class="col-md-3">
-				<button id="research"><i class="fa fa-book"></i> Research</button>
-				<button id="research"><i class="fa fa-pencil"></i> Writing</button>
-				<button id="research"><i class="fa fa-thumb-tack"></i> Editing</button>
+				<button id="research" name="research" onclick="increment(research)"><i class="fa fa-book"></i> Research</button>
+				<button id="writing" name="writing" onclick="increment(writing)"><i class="fa fa-pencil"></i> Writing</button>
+				<button id="editing" name="editing" onclick="increment(editing)"><i class="fa fa-thumb-tack"></i> Editing</button>
 			</div>
 			<div id="inventory" class="col-md-3">
-				<p>Research: <span id="research-status">0</span>/<span id="research-max">20</span>
-				<p>Writing: <span id="writing-status">0</span>/<span id="writing-max">20</span>
-				<p>Editing: <span id="editing-status">0</span>/<span id="editing-max">20</span>
+				<p>Research: <span id="research-status"></span>/<span id="research-max"></span>
+				<p>Writing: <span id="writing-status"></span>/<span id="writing-max"></span>
+				<p>Editing: <span id="editing-status"></span>/<span id="editing-max"></span>
 			</div>
 			<div id="tasks" class="col-md-6">
 				<p>Journal Articles:</p>
@@ -53,6 +55,16 @@
 				<button class="journal"><i class="fa fa-newspaper-o"></i></button>
 				<button class="journal"><i class="fa fa-newspaper-o"></i></button>
 			</div>
+		</div>
+		<div class="row" id="footer">
+		  <div class="col-md-6">
+		    <i>The Thesis Game by Mike Henry; &copy; 2019</i>
+		  </div>
+		  <div class="col-md-6">
+		    <span id="saving-status-2">
+		       Saved
+		    </span>
+		  </div>
 		</div>
 	</div>
 	<script type="text/javascript" src="game.js"></script>
